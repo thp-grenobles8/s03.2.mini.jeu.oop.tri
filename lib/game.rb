@@ -7,8 +7,8 @@ class Game
     @human_player = HumanPlayer.new(name)
     @enemies = []
     enemies_name = []
-    for x in 0..(enemies-1) do 
-       enemies_name << "Ennemi " + x.to_s
+    for x in 0..(enemies-1) do # Permet de générer des noms pour X adversaires sous la forme Robotueur X
+       enemies_name << "Robotueur " + x.to_s
     end
     for x in 0..(enemies-1) do
       @enemies << Player.new(enemies_name[x])
@@ -57,11 +57,12 @@ class Game
   end
 
   def end
-    puts "Le Jeu est fini"
+    puts "++++ Le jeu est fini ++++"
     if @human_player.life_points > 1
       puts "BRAVO tu as survécu face aux forces du mal, Gandalf est fier de toi"
     else
-      puts "You loose, You snooze"
+      puts "Apparemment non ..."
+      puts 'Allez recommence'
     end
   end
 

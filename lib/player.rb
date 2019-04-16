@@ -21,7 +21,7 @@ class Player
       if @life_points > 0
         puts "Le joueur #{name} vient d'encaisser #{damages} DMG ! \n Il reste #{life_points} HP à #{name}\n"
       else
-        puts "#Le joueur a térassé le joueur #{name} en lui infligeant #{damages} DMG"
+        puts "Le Joueur a térassé le joueur #{name} en lui infligeant #{damages} DMG"
         @life_points = 0
       end
     end
@@ -33,13 +33,14 @@ class Player
 
   def attacks(attacked_player)
     random_dmg = compute_damage
-    puts ">> #{name} attaque #{attacked_player.name} \n"
+    puts ">> #{@name} attaque #{attacked_player.name} \n"
     attacked_player.get_damage(random_dmg)
   end
 
 end
 
 class HumanPlayer < Player
+
   attr_accessor :weapon_level
 
   def initialize(name,life_points = 100,weapon_level = 1)
