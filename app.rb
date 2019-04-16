@@ -12,7 +12,7 @@ puts player1.show_state
 puts player2.show_state
 puts ">> passons à la phase de combat \n"
 
-while player1.life_points > 0 && player2.life_points > 0
+while player1.life_points > 0 && player2.life_points > 0 # Boucle qui permet de continuer le combat tant que les deux adversaires sont en vie #
   player1.attacks(player2)
   if player2.life_points > 0
     player2.attacks(player1)

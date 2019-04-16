@@ -10,7 +10,7 @@ class Game
     for x in 0..(enemies-1) do # Permet de générer des noms pour X adversaires sous la forme Robotueur X
        enemies_name << "Robotueur " + x.to_s
     end
-    for x in 0..(enemies-1) do
+    for x in 0..(enemies-1) do # Permet d'ajouter les Robotueurs à ton Array enemies
       @enemies << Player.new(enemies_name[x])
     end
   end
